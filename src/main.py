@@ -4,10 +4,9 @@ from ai_module import prioritize_cases
 
 def main():
     assets = pd.read_csv("data/assets.csv", sep=";")
-movements = pd.read_csv("data/movements.csv", sep=";")
-status = pd.read_csv("data/status_history.csv", sep=";")
+    movements = pd.read_csv("data/movements.csv", sep=";")
+    status = pd.read_csv("data/status_history.csv", sep=";")
 
-    # 🔍 DEBUG (agregar acá)
     print("ASSETS:", assets.columns)
     print("MOVEMENTS:", movements.columns)
     print("STATUS:", status.columns)
