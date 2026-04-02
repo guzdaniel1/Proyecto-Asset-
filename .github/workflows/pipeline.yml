@@ -28,5 +28,6 @@ jobs:
     - name: Upload results
       uses: actions/upload-artifact@v4
       with:
+       python-version: "3.11"
         name: results
         path: output/results.csv
