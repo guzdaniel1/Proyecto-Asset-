@@ -7,6 +7,11 @@ def main():
     movements = pd.read_csv("data/movements.csv")
     status = pd.read_csv("data/status_history.csv")
 
+    # 🔍 DEBUG (agregar acá)
+    print("ASSETS:", assets.columns)
+    print("MOVEMENTS:", movements.columns)
+    print("STATUS:", status.columns)
+
     results = analyze_data(assets, movements, status)
 
     # IA: priorización
