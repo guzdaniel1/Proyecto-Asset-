@@ -5,7 +5,7 @@ def generate_summary(results_df):
     summary = {}
 
     # =========================
-    # 📊 MÉTRICAS GENERALES
+    # 📊 GENERAL METRICS
     # =========================
     total_assets = results_df["asset_id"].nunique()
     total_records = len(results_df)
@@ -14,39 +14,48 @@ def generate_summary(results_df):
     summary["total_records"] = total_records
 
     # =========================
-    # 🔥 PRIORIDADES
+    # 🔥 PRIORITIES
     # =========================
-    priority_counts = results_df["priority"].value_counts().to_dict()
+    if "priority" in results_df.columns:
+        priority_counts = results_df["priority"].value_counts().to_dict()
 
-    for key, value in priority_counts.items():
-        summary[f"priority_{key.lower()}"] = value
+        for key, value in priority_counts.items():
+            summary[f"priority_{key.lower()}"] = value
+    else:
+        priority_counts = {}
 
     # =========================
     # ⚠️ ISSUES
     # =========================
-    issue_counts = results_df["issue"].value_counts().to_dict()
+    if "issue" in results_df.columns:
+        issue_counts = results_df["issue"].value_counts().to_dict()
 
-    for key, value in issue_counts.items():
-        summary[f"issue_{key.lower().replace(' ', '_')}"] = value
+        for key, value in issue_counts.items():
+            clean_key = key.lower().replace(" ", "_")
+            summary[f"issue_{clean_key}"] = value
+    else:
+        issue_counts = {}
 
     # =========================
-    # 🚨 % CRÍTICOS
+    # 🚨 CRITICAL %
     # =========================
     high = priority_counts.get("HIGH", 0)
-    critical_pct = (high / total_records * 100) if total_records > 0 else 0
+    total = total_records if total_records > 0 else 1  # avoid division by zero
 
+    critical_pct = (high / total) * 100
     summary["critical_percentage"] = round(critical_pct, 2)
 
     return pd.DataFrame([summary])
 
 
-def save_summary(results_path="output/results.csv",
-                 output_path="output/summary.csv"):
-
+def save_summary(
+    results_path="output/results.csv",
+    output_path="output/summary.csv"
+):
     df = pd.read_csv(results_path)
 
     summary_df = generate_summary(df)
 
     summary_df.to_csv(output_path, index=False)
 
-    print(f"📊 Resumen generado en: {output_path}")
+    print(f"📊 Summary generated at: {output_path}")

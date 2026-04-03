@@ -1,31 +1,53 @@
 import pandas as pd
 from analyzer import analyze_data
 from ai_module import prioritize_cases
-from advanced_rules import detectar_inconsistencias_avanzadas
-from summary import save_summary   # 👈 IMPORT
+from advanced_rules import detect_advanced_inconsistencies
+from summary import save_summary
+
 
 def main():
+    # =========================
+    # 📥 Load input data
+    # =========================
     assets = pd.read_csv("data/assets.csv", sep=";")
     movements = pd.read_csv("data/movements.csv", sep=";")
     status = pd.read_csv("data/status_history.csv", sep=";")
 
-    # 🔹 análisis base
+    # =========================
+    # 🔍 Run base analysis
+    # =========================
     results = analyze_data(assets, movements, status)
+
+    # =========================
+    # 🤖 Apply prioritization logic
+    # =========================
     results = prioritize_cases(results)
 
-    # 🔹 inconsistencias avanzadas
-    inconsistencias = detectar_inconsistencias_avanzadas(assets, movements, status)
+    # =========================
+    # 🚨 Run advanced inconsistency checks
+    # =========================
+    advanced_issues = detect_advanced_inconsistencies(
+        assets, movements, status
+    )
 
-    # 🔹 guardar outputs
+    # =========================
+    # 💾 Save outputs
+    # =========================
     results.to_csv("output/results.csv", index=False)
-    inconsistencias.to_csv("output/inconsistencias.csv", index=False)
+    advanced_issues.to_csv("output/detect_advanced_inconsistencies.csv", index=False)
 
-    # 🔥 NUEVO: generar resumen
+    # =========================
+    # 📊 Generate summary report
+    # =========================
     save_summary()
 
-    print("✅ results.csv generado")
-    print("✅ inconsistencias.csv generado")
-    print("📊 summary.csv generado")
+    # =========================
+    # ✅ Execution status
+    # =========================
+    print("✅ results.csv generated")
+    print("✅ advanced_issues.csv generated")
+    print("📊 summary.csv generated")
+
 
 if __name__ == "__main__":
     main()

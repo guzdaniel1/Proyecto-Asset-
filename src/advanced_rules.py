@@ -1,29 +1,29 @@
 import pandas as pd
 
 
-def detectar_inconsistencias_avanzadas(assets, movements, status):
+def detect_advanced_inconsistencies(assets, movements, status):
     """
-    Analiza inconsistencias avanzadas combinando:
-    - estado actual
-    - últimos movimientos
-    - datos del asset
+    Analyze advanced inconsistencies by combining:
+    - current status
+    - latest movements
+    - asset data
 
-    Retorna un DataFrame con:
-    asset_id | tipo | detalle | prioridad
+    Returns a DataFrame with:
+    asset_id | type | detail | priority
     """
 
     issues = []
     today = pd.Timestamp.today()
 
     # =========================
-    # 🧹 LIMPIEZA DE DATOS
+    # 🧹 DATA CLEANING
     # =========================
 
-    # eliminar columnas basura tipo Unnamed
+    # remove unwanted columns (e.g., Unnamed)
     status = status.loc[:, ~status.columns.str.contains('^Unnamed')]
     movements = movements.loc[:, ~movements.columns.str.contains('^Unnamed')]
 
-    # convertir fechas de forma segura
+    # safely convert dates
     status["status_date"] = pd.to_datetime(
         status["status_date"], errors="coerce", dayfirst=True
     )
@@ -32,7 +32,7 @@ def detectar_inconsistencias_avanzadas(assets, movements, status):
     )
 
     # =========================
-    # 📊 ÚLTIMOS REGISTROS
+    # 📊 LATEST RECORDS
     # =========================
 
     latest_status = (
@@ -40,13 +40,13 @@ def detectar_inconsistencias_avanzadas(assets, movements, status):
         .drop_duplicates("asset_id", keep="last")
     )
 
-    latest_move = (
+    latest_movement = (
         movements.sort_values("movement_date")
         .drop_duplicates("asset_id", keep="last")
     )
 
     # =========================
-    # 🔗 MERGES CONTROLADOS
+    # 🔗 MERGES
     # =========================
 
     df = assets.merge(
@@ -57,102 +57,100 @@ def detectar_inconsistencias_avanzadas(assets, movements, status):
     )
 
     df = df.merge(
-        latest_move[["asset_id", "movement_date"]],
+        latest_movement[["asset_id", "movement_date"]],
         on="asset_id",
         how="left"
     )
 
     # =========================
-    # 🧠 NORMALIZACIÓN DE CAMPOS
+    # 🧠 FIELD NORMALIZATION
     # =========================
 
-    # detectar columna correcta de status
     if "status_status" in df.columns:
-        df["status_final"] = df["status_status"]
+        df["final_status"] = df["status_status"]
     elif "status" in df.columns:
-        df["status_final"] = df["status"]
+        df["final_status"] = df["status"]
     else:
-        df["status_final"] = None
+        df["final_status"] = None
 
     # =========================
-    # 🔍 REGLAS AVANZADAS
+    # 🔍 ADVANCED RULES
     # =========================
 
     for _, row in df.iterrows():
 
         asset_id = row.get("asset_id")
 
-        status_val = str(row.get("status_final") or "").lower()
+        status_val = str(row.get("final_status") or "").lower()
         location = str(row.get("location") or "").lower()
 
         assigned = row.get("assigned_to")
-        has_assigned = pd.notna(assigned) and str(assigned).strip() != ""
+        has_assignment = pd.notna(assigned) and str(assigned).strip() != ""
 
-        last_move = row.get("movement_date")
+        last_movement = row.get("movement_date")
         status_date = row.get("status_date")
 
         # -------------------------
-        # Regla 1: Stock mal ubicado
+        # Rule 1: Stock in wrong location
         # -------------------------
         if "stock" in status_val and "warehouse" not in location:
             issues.append({
                 "asset_id": asset_id,
-                "tipo": "ubicacion",
-                "detalle": "In Stock fuera de deposito",
-                "prioridad": "MEDIA"
+                "type": "location",
+                "detail": "In Stock outside warehouse",
+                "priority": "MEDIUM"
             })
 
         # -------------------------
-        # Regla 2: Uso sin asignación
+        # Rule 2: Usage without assignment
         # -------------------------
-        if "use" in status_val and not has_assigned:
+        if "use" in status_val and not has_assignment:
             issues.append({
                 "asset_id": asset_id,
-                "tipo": "asignacion",
-                "detalle": "En uso sin asignacion",
-                "prioridad": "ALTA"
+                "type": "assignment",
+                "detail": "In use without assignment",
+                "priority": "HIGH"
             })
 
-        if "stock" in status_val and has_assigned:
+        if "stock" in status_val and has_assignment:
             issues.append({
                 "asset_id": asset_id,
-                "tipo": "asignacion",
-                "detalle": "En stock pero asignado",
-                "prioridad": "MEDIA"
+                "type": "assignment",
+                "detail": "In stock but assigned",
+                "priority": "MEDIUM"
             })
 
         # -------------------------
-        # Regla 3: Transit sin movimiento
+        # Rule 3: Transit without recent movement
         # -------------------------
         if "transit" in status_val:
-            if pd.isna(last_move) or (today - last_move).days > 10:
+            if pd.isna(last_movement) or (today - last_movement).days > 10:
                 issues.append({
                     "asset_id": asset_id,
-                    "tipo": "movimiento",
-                    "detalle": "Sin movimiento reciente",
-                    "prioridad": "CRITICA"
+                    "type": "movement",
+                    "detail": "No recent movement",
+                    "priority": "CRITICAL"
                 })
 
         # -------------------------
-        # Regla 4: Transit prolongado
+        # Rule 4: Prolonged transit
         # -------------------------
         if "transit" in status_val and pd.notna(status_date):
             if (today - status_date).days > 30:
                 issues.append({
                     "asset_id": asset_id,
-                    "tipo": "tiempo",
-                    "detalle": "Más de 30 días en tránsito",
-                    "prioridad": "CRITICA"
+                    "type": "time",
+                    "detail": "More than 30 days in transit",
+                    "priority": "CRITICAL"
                 })
 
     # =========================
-    # 📦 RESULTADO FINAL
+    # 📦 FINAL OUTPUT
     # =========================
 
     result_df = pd.DataFrame(issues)
 
-    # evitar DataFrame vacío sin columnas
     if result_df.empty:
-        result_df = pd.DataFrame(columns=["asset_id", "tipo", "detalle", "prioridad"])
+        result_df = pd.DataFrame(columns=["asset_id", "type", "detail", "priority"])
 
     return result_df

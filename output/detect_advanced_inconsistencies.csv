@@ -1,0 +1,120 @@
+asset_id,type,detail,priority
+A0002,movement,No recent movement,CRITICAL
+A0002,time,More than 30 days in transit,CRITICAL
+A0007,location,In Stock outside warehouse,MEDIUM
+A0007,assignment,In stock but assigned,MEDIUM
+A0008,location,In Stock outside warehouse,MEDIUM
+A0010,movement,No recent movement,CRITICAL
+A0010,time,More than 30 days in transit,CRITICAL
+A0014,movement,No recent movement,CRITICAL
+A0014,time,More than 30 days in transit,CRITICAL
+A0015,movement,No recent movement,CRITICAL
+A0015,time,More than 30 days in transit,CRITICAL
+A0016,movement,No recent movement,CRITICAL
+A0016,time,More than 30 days in transit,CRITICAL
+A0017,movement,No recent movement,CRITICAL
+A0017,time,More than 30 days in transit,CRITICAL
+A0019,movement,No recent movement,CRITICAL
+A0019,time,More than 30 days in transit,CRITICAL
+A0020,location,In Stock outside warehouse,MEDIUM
+A0021,movement,No recent movement,CRITICAL
+A0021,time,More than 30 days in transit,CRITICAL
+A0022,location,In Stock outside warehouse,MEDIUM
+A0022,assignment,In stock but assigned,MEDIUM
+A0023,location,In Stock outside warehouse,MEDIUM
+A0023,assignment,In stock but assigned,MEDIUM
+A0025,movement,No recent movement,CRITICAL
+A0025,time,More than 30 days in transit,CRITICAL
+A0027,assignment,In use without assignment,HIGH
+A0031,location,In Stock outside warehouse,MEDIUM
+A0034,assignment,In use without assignment,HIGH
+A0035,location,In Stock outside warehouse,MEDIUM
+A0035,assignment,In stock but assigned,MEDIUM
+A0036,location,In Stock outside warehouse,MEDIUM
+A0036,assignment,In stock but assigned,MEDIUM
+A0037,location,In Stock outside warehouse,MEDIUM
+A0039,assignment,In use without assignment,HIGH
+A0040,location,In Stock outside warehouse,MEDIUM
+A0040,assignment,In stock but assigned,MEDIUM
+A0046,location,In Stock outside warehouse,MEDIUM
+A0048,movement,No recent movement,CRITICAL
+A0048,time,More than 30 days in transit,CRITICAL
+A0049,movement,No recent movement,CRITICAL
+A0049,time,More than 30 days in transit,CRITICAL
+A0050,movement,No recent movement,CRITICAL
+A0050,time,More than 30 days in transit,CRITICAL
+A0051,assignment,In use without assignment,HIGH
+A0052,movement,No recent movement,CRITICAL
+A0052,time,More than 30 days in transit,CRITICAL
+A0053,movement,No recent movement,CRITICAL
+A0053,time,More than 30 days in transit,CRITICAL
+A0054,movement,No recent movement,CRITICAL
+A0054,time,More than 30 days in transit,CRITICAL
+A0055,movement,No recent movement,CRITICAL
+A0055,time,More than 30 days in transit,CRITICAL
+A0057,movement,No recent movement,CRITICAL
+A0057,time,More than 30 days in transit,CRITICAL
+A0058,movement,No recent movement,CRITICAL
+A0058,time,More than 30 days in transit,CRITICAL
+A0059,location,In Stock outside warehouse,MEDIUM
+A0059,assignment,In stock but assigned,MEDIUM
+A0060,movement,No recent movement,CRITICAL
+A0060,time,More than 30 days in transit,CRITICAL
+A0061,movement,No recent movement,CRITICAL
+A0061,time,More than 30 days in transit,CRITICAL
+A0065,movement,No recent movement,CRITICAL
+A0065,time,More than 30 days in transit,CRITICAL
+A0067,location,In Stock outside warehouse,MEDIUM
+A0068,location,In Stock outside warehouse,MEDIUM
+A0068,assignment,In stock but assigned,MEDIUM
+A0071,movement,No recent movement,CRITICAL
+A0071,time,More than 30 days in transit,CRITICAL
+A0072,movement,No recent movement,CRITICAL
+A0072,time,More than 30 days in transit,CRITICAL
+A0073,location,In Stock outside warehouse,MEDIUM
+A0073,assignment,In stock but assigned,MEDIUM
+A0074,movement,No recent movement,CRITICAL
+A0074,time,More than 30 days in transit,CRITICAL
+A0079,movement,No recent movement,CRITICAL
+A0079,time,More than 30 days in transit,CRITICAL
+A0080,location,In Stock outside warehouse,MEDIUM
+A0080,assignment,In stock but assigned,MEDIUM
+A0082,movement,No recent movement,CRITICAL
+A0082,time,More than 30 days in transit,CRITICAL
+A0083,location,In Stock outside warehouse,MEDIUM
+A0086,location,In Stock outside warehouse,MEDIUM
+A0086,assignment,In stock but assigned,MEDIUM
+A0087,location,In Stock outside warehouse,MEDIUM
+A0087,assignment,In stock but assigned,MEDIUM
+A0088,movement,No recent movement,CRITICAL
+A0088,time,More than 30 days in transit,CRITICAL
+A0090,location,In Stock outside warehouse,MEDIUM
+A0092,movement,No recent movement,CRITICAL
+A0092,time,More than 30 days in transit,CRITICAL
+A0093,movement,No recent movement,CRITICAL
+A0093,time,More than 30 days in transit,CRITICAL
+A0096,movement,No recent movement,CRITICAL
+A0096,time,More than 30 days in transit,CRITICAL
+A0098,movement,No recent movement,CRITICAL
+A0098,time,More than 30 days in transit,CRITICAL
+A0099,assignment,In use without assignment,HIGH
+A0100,movement,No recent movement,CRITICAL
+A0100,time,More than 30 days in transit,CRITICAL
+A0106,movement,No recent movement,CRITICAL
+A0106,time,More than 30 days in transit,CRITICAL
+A0107,location,In Stock outside warehouse,MEDIUM
+A0107,assignment,In stock but assigned,MEDIUM
+A0110,location,In Stock outside warehouse,MEDIUM
+A0110,assignment,In stock but assigned,MEDIUM
+A0111,location,In Stock outside warehouse,MEDIUM
+A0111,assignment,In stock but assigned,MEDIUM
+A0113,location,In Stock outside warehouse,MEDIUM
+A0113,assignment,In stock but assigned,MEDIUM
+A0114,location,In Stock outside warehouse,MEDIUM
+A0114,assignment,In stock but assigned,MEDIUM
+A0116,assignment,In use without assignment,HIGH
+A0117,location,In Stock outside warehouse,MEDIUM
+A0117,assignment,In stock but assigned,MEDIUM
+A0118,location,In Stock outside warehouse,MEDIUM
+A0118,assignment,In stock but assigned,MEDIUM
+A0120,assignment,In use without assignment,HIGH

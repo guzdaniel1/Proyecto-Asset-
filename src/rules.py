@@ -5,29 +5,41 @@ def detect_inconsistencies(df):
     issues = []
 
     for _, row in df.iterrows():
-        problem = None
+        issue = None
 
-        # Regla 1: In Transit > 30 días
-        if row["status"] == "In Transit" and row["days_in_state"] > 30:
-            problem = "Transit > 30 days"
+        status = row.get("status")
+        days = row.get("days_in_state")
+        location = row.get("location")
 
-        # Regla 2: In Transit > 15 días
-        elif row["status"] == "In Transit" and row["days_in_state"] > 15:
-            problem = "Transit > 15 days"
+        # =========================
+        # 🚨 Rule 1: Transit > 30 days
+        # =========================
+        if status == "In Transit" and days > 30:
+            issue = "Transit > 30 days"
 
-        # Regla 3: estado inconsistente
-        elif row["status"] not in ["In Stock", "In Transit", "In Use", "Repair"]:
-            problem = "Invalid status"
+        # =========================
+        # ⚠️ Rule 2: Transit > 15 days
+        # =========================
+        elif status == "In Transit" and days > 15:
+            issue = "Transit > 15 days"
 
-        # Regla 4: sin ubicación
-        elif not row.get("location"):
-            problem = "Missing location"
+        # =========================
+        # ❌ Rule 3: Invalid status
+        # =========================
+        elif status not in ["In Stock", "In Transit", "In Use", "Repair"]:
+            issue = "Invalid status"
+
+        # =========================
+        # 📍 Rule 4: Missing location
+        # =========================
+        elif not location or pd.isna(location):
+            issue = "Missing location"
 
         issues.append({
-            "asset_id": row["asset_id"],
-            "status": row["status"],
-            "days_in_state": row["days_in_state"],
-            "issue": problem
+            "asset_id": row.get("asset_id"),
+            "status": status,
+            "days_in_state": days,
+            "issue": issue
         })
 
     return pd.DataFrame(issues)
