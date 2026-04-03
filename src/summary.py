@@ -5,7 +5,7 @@ def generate_summary(results_df):
     summary = {}
 
     # =========================
-    # 📊 GENERAL METRICS
+    #  GENERAL METRICS
     # =========================
     total_assets = results_df["asset_id"].nunique()
     total_records = len(results_df)
@@ -14,7 +14,7 @@ def generate_summary(results_df):
     summary["total_records"] = total_records
 
     # =========================
-    # 🔥 PRIORITIES
+    #  PRIORITIES
     # =========================
     if "priority" in results_df.columns:
         priority_counts = results_df["priority"].value_counts().to_dict()
@@ -25,7 +25,7 @@ def generate_summary(results_df):
         priority_counts = {}
 
     # =========================
-    # ⚠️ ISSUES
+    #  ISSUES
     # =========================
     if "issue" in results_df.columns:
         issue_counts = results_df["issue"].value_counts().to_dict()
@@ -37,7 +37,7 @@ def generate_summary(results_df):
         issue_counts = {}
 
     # =========================
-    # 🚨 CRITICAL %
+    #  CRITICAL %
     # =========================
     high = priority_counts.get("HIGH", 0)
     total = total_records if total_records > 0 else 1  # avoid division by zero
@@ -58,4 +58,4 @@ def save_summary(
 
     summary_df.to_csv(output_path, index=False)
 
-    print(f"📊 Summary generated at: {output_path}")
+    print(f"Summary generated at: {output_path}")

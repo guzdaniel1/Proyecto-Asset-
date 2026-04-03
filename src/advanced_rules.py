@@ -16,7 +16,7 @@ def detect_advanced_inconsistencies(assets, movements, status):
     today = pd.Timestamp.today()
 
     # =========================
-    # 🧹 DATA CLEANING
+    #  DATA CLEANING
     # =========================
 
     # remove unwanted columns (e.g., Unnamed)
@@ -32,7 +32,7 @@ def detect_advanced_inconsistencies(assets, movements, status):
     )
 
     # =========================
-    # 📊 LATEST RECORDS
+    #  LATEST RECORDS
     # =========================
 
     latest_status = (
@@ -46,7 +46,7 @@ def detect_advanced_inconsistencies(assets, movements, status):
     )
 
     # =========================
-    # 🔗 MERGES
+    #  MERGES
     # =========================
 
     df = assets.merge(
@@ -63,7 +63,7 @@ def detect_advanced_inconsistencies(assets, movements, status):
     )
 
     # =========================
-    # 🧠 FIELD NORMALIZATION
+    #  FIELD NORMALIZATION
     # =========================
 
     if "status_status" in df.columns:
@@ -74,7 +74,7 @@ def detect_advanced_inconsistencies(assets, movements, status):
         df["final_status"] = None
 
     # =========================
-    # 🔍 ADVANCED RULES
+    #  ADVANCED RULES
     # =========================
 
     for _, row in df.iterrows():
@@ -145,7 +145,7 @@ def detect_advanced_inconsistencies(assets, movements, status):
                 })
 
     # =========================
-    # 📦 FINAL OUTPUT
+    #  FINAL OUTPUT
     # =========================
 
     result_df = pd.DataFrame(issues)
