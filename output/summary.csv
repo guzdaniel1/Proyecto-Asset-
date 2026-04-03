@@ -1,2 +1,2 @@
-total_assets,total_records,priority_ok,priority_high,issue_transit_>_30_days,issue_invalid_status,critical_percentage
-120,120,86,34,33,1,28.33
+total_assets,total_records,max_days_in_state,avg_days_in_state,over_365_days,priority_ok,priority_high,issue_transit_>_30_days,issue_invalid_status,critical_percentage
+120,120,1388,747.59,119,86,34,33,1,28.33

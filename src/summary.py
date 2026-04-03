@@ -14,6 +14,16 @@ def generate_summary(results_df):
     summary["total_records"] = total_records
 
     # =========================
+    #  TIME METRICS
+    # =========================
+    if "days_in_state" in results_df.columns:
+        summary["max_days_in_state"] = int(results_df["days_in_state"].max())
+        summary["avg_days_in_state"] = round(results_df["days_in_state"].mean(), 2)
+
+        # extra KPI pro 🔥
+        summary["over_365_days"] = int((results_df["days_in_state"] > 365).sum())
+
+    # =========================
     #  PRIORITIES
     # =========================
     if "priority" in results_df.columns:
