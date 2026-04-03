@@ -16,7 +16,7 @@ def main():
     # IA: priorización
     results = prioritize_cases(results)
 
-    results.to_csv("output/results2.csv", index=False)
+    results.to_csv("output/results.csv", index=False)
     print("✅ Análisis completado. Archivo generado en /output/results.csv")
 
 if __name__ == "__main__":
