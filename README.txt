@@ -1,7 +1,14 @@
-# Device Tracking AI
+# Proyecto Asset Management
+
+Este proyecto analiza activos tecnológicos y detecta inconsistencias.
+
+## Funcionalidades
+- Análisis de estados
+- Detección de inconsistencias
+- Priorización de casos (IA básica)
+- Exportación a CSV
 
 ## Cómo ejecutar
 
 ```bash
-pip install -r requirements.txt
 python src/main.py
