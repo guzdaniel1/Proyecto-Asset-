@@ -20,4 +20,4 @@ def main():
     print("✅ Análisis completado. Archivo generado en /output/results.csv")
 
 if __name__ == "__main__":
-    main()
+   main()

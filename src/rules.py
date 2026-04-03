@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def detect_inconsistencies(df):
     issues = []
 
