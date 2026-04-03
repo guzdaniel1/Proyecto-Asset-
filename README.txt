@@ -11,4 +11,12 @@ Este proyecto analiza activos tecnológicos y detecta inconsistencias.
 ## Cómo ejecutar
 
 ```bash
+<<<<<<< HEAD
 python src/main.py
+=======
+<<<<<<< HEAD
+python src/main.py
+=======
+python src/main.py
+>>>>>>> d404418 (actualización)
+>>>>>>> ea552be (mensaje)
