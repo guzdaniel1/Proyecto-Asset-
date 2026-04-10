@@ -1,121 +1,121 @@
 asset_id,status,days_in_state,issue,priority
-A0001,In Use,605.0,,OK
-A0002,In Transit,890.0,Transit > 30 days,HIGH
-A0003,Repair,625.0,,OK
-A0004,Repair,627.0,,OK
-A0005,In Use,618.0,,OK
-A0006,Repair,877.0,,OK
-A0007,In Stock,1006.0,,OK
-A0008,In Stock,654.0,,OK
-A0009,Repair,690.0,,OK
-A0010,In Transit,800.0,Transit > 30 days,HIGH
-A0011,Repair,634.0,,OK
-A0012,Repair,655.0,,OK
-A0013,Repair,757.0,,OK
-A0014,In Transit,606.0,Transit > 30 days,HIGH
-A0015,In Transit,572.0,Transit > 30 days,HIGH
-A0016,In Transit,677.0,Transit > 30 days,HIGH
-A0017,In Transit,721.0,Transit > 30 days,HIGH
-A0018,Repair,673.0,,OK
-A0019,In Transit,870.0,Transit > 30 days,HIGH
-A0020,In Stock,627.0,,OK
-A0021,In Transit,653.0,Transit > 30 days,HIGH
-A0022,In Stock,767.0,,OK
-A0023,In Stock,572.0,,OK
-A0024,Repair,927.0,,OK
-A0025,In Transit,816.0,Transit > 30 days,HIGH
-A0026,Repair,641.0,,OK
-A0027,In Use,927.0,,OK
-A0028,In Use,645.0,,OK
-A0029,In Use,618.0,,OK
-A0030,In Use,850.0,,OK
-A0031,In Stock,1091.0,,OK
-A0032,Repair,801.0,,OK
+A0001,In Use,611.0,,OK
+A0002,In Transit,896.0,Transit > 30 days,HIGH
+A0003,Repair,631.0,,OK
+A0004,Repair,633.0,,OK
+A0005,In Use,624.0,,OK
+A0006,Repair,883.0,,OK
+A0007,In Stock,1012.0,,OK
+A0008,In Stock,660.0,,OK
+A0009,Repair,696.0,,OK
+A0010,In Transit,806.0,Transit > 30 days,HIGH
+A0011,Repair,640.0,,OK
+A0012,Repair,661.0,,OK
+A0013,Repair,763.0,,OK
+A0014,In Transit,612.0,Transit > 30 days,HIGH
+A0015,In Transit,578.0,Transit > 30 days,HIGH
+A0016,In Transit,683.0,Transit > 30 days,HIGH
+A0017,In Transit,727.0,Transit > 30 days,HIGH
+A0018,Repair,679.0,,OK
+A0019,In Transit,876.0,Transit > 30 days,HIGH
+A0020,In Stock,633.0,,OK
+A0021,In Transit,659.0,Transit > 30 days,HIGH
+A0022,In Stock,773.0,,OK
+A0023,In Stock,578.0,,OK
+A0024,Repair,933.0,,OK
+A0025,In Transit,822.0,Transit > 30 days,HIGH
+A0026,Repair,647.0,,OK
+A0027,In Use,933.0,,OK
+A0028,In Use,651.0,,OK
+A0029,In Use,624.0,,OK
+A0030,In Use,856.0,,OK
+A0031,In Stock,1097.0,,OK
+A0032,Repair,807.0,,OK
 A0033,,,Invalid status,HIGH
-A0034,In Use,1010.0,,OK
-A0035,In Stock,732.0,,OK
-A0036,In Stock,762.0,,OK
-A0037,In Stock,744.0,,OK
-A0038,Repair,877.0,,OK
-A0039,In Use,634.0,,OK
-A0040,In Stock,806.0,,OK
-A0041,Repair,666.0,,OK
-A0042,Repair,645.0,,OK
-A0043,In Use,1001.0,,OK
-A0044,Repair,803.0,,OK
-A0045,In Use,1033.0,,OK
-A0046,In Stock,1038.0,,OK
-A0047,Repair,920.0,,OK
-A0048,In Transit,959.0,Transit > 30 days,HIGH
-A0049,In Transit,628.0,Transit > 30 days,HIGH
-A0050,In Transit,587.0,Transit > 30 days,HIGH
-A0051,In Use,893.0,,OK
-A0052,In Transit,941.0,Transit > 30 days,HIGH
-A0053,In Transit,606.0,Transit > 30 days,HIGH
-A0054,In Transit,982.0,Transit > 30 days,HIGH
-A0055,In Transit,962.0,Transit > 30 days,HIGH
-A0056,Repair,689.0,,OK
-A0057,In Transit,1050.0,Transit > 30 days,HIGH
-A0058,In Transit,635.0,Transit > 30 days,HIGH
-A0059,In Stock,600.0,,OK
-A0060,In Transit,672.0,Transit > 30 days,HIGH
-A0061,In Transit,853.0,Transit > 30 days,HIGH
-A0062,Repair,687.0,,OK
-A0063,Repair,791.0,,OK
-A0064,Repair,765.0,,OK
-A0065,In Transit,682.0,Transit > 30 days,HIGH
-A0066,Repair,686.0,,OK
-A0067,In Stock,975.0,,OK
-A0068,In Stock,604.0,,OK
-A0069,Repair,564.0,,OK
-A0070,In Use,670.0,,OK
-A0071,In Transit,865.0,Transit > 30 days,HIGH
-A0072,In Transit,712.0,Transit > 30 days,HIGH
-A0073,In Stock,613.0,,OK
-A0074,In Transit,554.0,Transit > 30 days,HIGH
-A0075,In Use,606.0,,OK
-A0076,In Use,650.0,,OK
-A0077,In Use,580.0,,OK
-A0078,In Use,1169.0,,OK
-A0079,In Transit,619.0,Transit > 30 days,HIGH
-A0080,In Stock,734.0,,OK
-A0081,Repair,640.0,,OK
-A0082,In Transit,598.0,Transit > 30 days,HIGH
-A0083,In Stock,780.0,,OK
-A0084,Repair,591.0,,OK
-A0085,In Use,564.0,,OK
-A0086,In Stock,1388.0,,OK
-A0087,In Stock,569.0,,OK
-A0088,In Transit,918.0,Transit > 30 days,HIGH
-A0089,Repair,845.0,,OK
-A0090,In Stock,746.0,,OK
-A0091,Repair,675.0,,OK
-A0092,In Transit,1220.0,Transit > 30 days,HIGH
-A0093,In Transit,701.0,Transit > 30 days,HIGH
-A0094,Repair,581.0,,OK
-A0095,Repair,663.0,,OK
-A0096,In Transit,698.0,Transit > 30 days,HIGH
-A0097,In Use,782.0,,OK
-A0098,In Transit,556.0,Transit > 30 days,HIGH
-A0099,In Use,619.0,,OK
-A0100,In Transit,931.0,Transit > 30 days,HIGH
-A0101,Repair,603.0,,OK
-A0102,In Use,852.0,,OK
-A0103,In Use,1117.0,,OK
-A0104,In Use,649.0,,OK
-A0105,Repair,750.0,,OK
-A0106,In Transit,655.0,Transit > 30 days,HIGH
-A0107,In Stock,609.0,,OK
-A0108,In Use,771.0,,OK
-A0109,In Use,735.0,,OK
-A0110,In Stock,668.0,,OK
-A0111,In Stock,619.0,,OK
-A0112,In Use,699.0,,OK
-A0113,In Stock,800.0,,OK
-A0114,In Stock,761.0,,OK
-A0115,Repair,714.0,,OK
-A0116,In Use,570.0,,OK
-A0117,In Stock,644.0,,OK
-A0118,In Stock,574.0,,OK
-A0119,Repair,666.0,,OK
-A0120,In Use,696.0,,OK
+A0034,In Use,1016.0,,OK
+A0035,In Stock,738.0,,OK
+A0036,In Stock,768.0,,OK
+A0037,In Stock,750.0,,OK
+A0038,Repair,883.0,,OK
+A0039,In Use,640.0,,OK
+A0040,In Stock,812.0,,OK
+A0041,Repair,672.0,,OK
+A0042,Repair,651.0,,OK
+A0043,In Use,1007.0,,OK
+A0044,Repair,809.0,,OK
+A0045,In Use,1039.0,,OK
+A0046,In Stock,1044.0,,OK
+A0047,Repair,926.0,,OK
+A0048,In Transit,965.0,Transit > 30 days,HIGH
+A0049,In Transit,634.0,Transit > 30 days,HIGH
+A0050,In Transit,593.0,Transit > 30 days,HIGH
+A0051,In Use,899.0,,OK
+A0052,In Transit,947.0,Transit > 30 days,HIGH
+A0053,In Transit,612.0,Transit > 30 days,HIGH
+A0054,In Transit,988.0,Transit > 30 days,HIGH
+A0055,In Transit,968.0,Transit > 30 days,HIGH
+A0056,Repair,695.0,,OK
+A0057,In Transit,1056.0,Transit > 30 days,HIGH
+A0058,In Transit,641.0,Transit > 30 days,HIGH
+A0059,In Stock,606.0,,OK
+A0060,In Transit,678.0,Transit > 30 days,HIGH
+A0061,In Transit,859.0,Transit > 30 days,HIGH
+A0062,Repair,693.0,,OK
+A0063,Repair,797.0,,OK
+A0064,Repair,771.0,,OK
+A0065,In Transit,688.0,Transit > 30 days,HIGH
+A0066,Repair,692.0,,OK
+A0067,In Stock,981.0,,OK
+A0068,In Stock,610.0,,OK
+A0069,Repair,570.0,,OK
+A0070,In Use,676.0,,OK
+A0071,In Transit,871.0,Transit > 30 days,HIGH
+A0072,In Transit,718.0,Transit > 30 days,HIGH
+A0073,In Stock,619.0,,OK
+A0074,In Transit,560.0,Transit > 30 days,HIGH
+A0075,In Use,612.0,,OK
+A0076,In Use,656.0,,OK
+A0077,In Use,586.0,,OK
+A0078,In Use,1175.0,,OK
+A0079,In Transit,625.0,Transit > 30 days,HIGH
+A0080,In Stock,740.0,,OK
+A0081,Repair,646.0,,OK
+A0082,In Transit,604.0,Transit > 30 days,HIGH
+A0083,In Stock,786.0,,OK
+A0084,Repair,597.0,,OK
+A0085,In Use,570.0,,OK
+A0086,In Stock,1394.0,,OK
+A0087,In Stock,575.0,,OK
+A0088,In Transit,924.0,Transit > 30 days,HIGH
+A0089,Repair,851.0,,OK
+A0090,In Stock,752.0,,OK
+A0091,Repair,681.0,,OK
+A0092,In Transit,1226.0,Transit > 30 days,HIGH
+A0093,In Transit,707.0,Transit > 30 days,HIGH
+A0094,Repair,587.0,,OK
+A0095,Repair,669.0,,OK
+A0096,In Transit,704.0,Transit > 30 days,HIGH
+A0097,In Use,788.0,,OK
+A0098,In Transit,562.0,Transit > 30 days,HIGH
+A0099,In Use,625.0,,OK
+A0100,In Transit,937.0,Transit > 30 days,HIGH
+A0101,Repair,609.0,,OK
+A0102,In Use,858.0,,OK
+A0103,In Use,1123.0,,OK
+A0104,In Use,655.0,,OK
+A0105,Repair,756.0,,OK
+A0106,In Transit,661.0,Transit > 30 days,HIGH
+A0107,In Stock,615.0,,OK
+A0108,In Use,777.0,,OK
+A0109,In Use,741.0,,OK
+A0110,In Stock,674.0,,OK
+A0111,In Stock,625.0,,OK
+A0112,In Use,705.0,,OK
+A0113,In Stock,806.0,,OK
+A0114,In Stock,767.0,,OK
+A0115,Repair,720.0,,OK
+A0116,In Use,576.0,,OK
+A0117,In Stock,650.0,,OK
+A0118,In Stock,580.0,,OK
+A0119,Repair,672.0,,OK
+A0120,In Use,702.0,,OK
